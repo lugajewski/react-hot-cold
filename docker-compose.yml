@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+   builder:
+      build:
+         context: .
+         dockerfile: Dockerfile
+      image: app_builder
+   tester:
+      build:
+         context: .
+         dockerfile: Dockerfile2
+      image: app_tester
+      depends_on:
+         - builder
