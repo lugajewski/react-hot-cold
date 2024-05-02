@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:latest as lab6
 RUN apt-get update && apt-get install git -y
 RUN git clone https://github.com/jbahyrycz/ReactHotCold.git
 WORKDIR /ReactHotCold
